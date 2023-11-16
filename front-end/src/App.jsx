@@ -24,6 +24,7 @@ import Analytics from './pages/Sidebar/Analytics.jsx';
 import Comment from './pages/Sidebar/Comment.jsx';
 import Product from './pages/Sidebar/Product.jsx';
 import ProductList from './pages/Sidebar/ProductList.jsx';
+import BMICalculator from "./pages/Sidebar/BMICalculator/BMICalculator.jsx";
 
 
 
@@ -64,7 +65,9 @@ const App = () => {
 
 
 
+        <Route path="bmi" element={<BMICalculator />} />
 
+        <Route path="goals" element={<Goals />} />
 
         <Route path="sidebar" element={<Sidebar />} />
         <Route path="goals" element={<Goals />} />

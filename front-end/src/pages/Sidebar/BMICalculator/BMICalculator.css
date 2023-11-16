@@ -1,0 +1,212 @@
+/* BMICalculator.css */
+
+.bmi-calculator {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  .result {
+    margin-top: 15px;
+  }
+  
+  .result p {
+    margin: 0;
+  }
+  
+  .result strong {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+  
+  /* BMICalculator.css */
+
+/* ... (previous styles) */
+
+.bmi-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.bmi-category {
+  flex-grow: 1;
+  text-align: center;
+  padding: 5px;
+  color: #fff;
+}
+
+.bmi-pointer {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -18px;
+  transform: translateX(-50%);
+}
+/* BMICalculator.css */
+/* BMICalculator.css */
+.c-bmi {
+  background-color: hsl(211, 20%, 92%);
+  border-radius: .25rem;
+  box-sizing: border-box;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  padding: 1rem;
+  max-width: 40rem;
+  width: 100%;
+}
+.c-bmi fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+.c-bmi__group-text {
+  display: none;
+  font-size: small;
+  order: 2;
+  padding: 1rem 0;
+  text-align: left;
+  width: 100%;
+}
+.c-bmi__groups {
+  border: 0;
+  flex-wrap: wrap;
+  font-size: x-small;
+  padding: 0;
+  text-align: center;
+  width: 100%;
+}
+.c-bmi__groups label {
+  display: block;
+  padding: .5rem;
+  position: relative;
+}
+
+[for="bmi-g0"] { background-color: #4691e2; }
+[for="bmi-g1"] { background-color: #0cb764; }
+[for="bmi-g2"] { background-color: #febf18; }
+[for="bmi-g3"] { background-color: #fc8711; }
+[for="bmi-g4"] { background-color: #ff6455; }
+[for="bmi-g5"] { background-color: #cc1100; color: #fff; }
+
+.c-bmi__groups input:checked + label::before {
+  background-color: #fff;
+  clip-path: polygon(0% 0%,0% 100%,75.00% 50.00%);
+  content: '';
+  display: inline-block;
+  height: 1rem;
+  left: 0.5rem;
+  position: absolute;
+  top: 0.35rem;
+  width: 1rem;
+}
+.c-bmi__groups input:checked + label + div {
+  display: block;
+  flex: 0 0 100%;
+}
+.c-bmi__label {
+  display: block;
+  font-size: medium;
+  margin: 0 0 1rem 0;
+  position: relative;
+}
+.c-bmi__label output {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.c-bmi__range {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  outline: none;
+  width: 100%;
+}
+.c-bmi__range::-webkit-slider-runnable-track {
+  background-image: linear-gradient(to bottom, transparent 45%, lightslategray 45%, lightslategray 55%, transparent 55%);
+}
+.c-bmi__range::-moz-range-track {
+  background-image: linear-gradient(to bottom, transparent 45%, lightslategray 45%, lightslategray 55%, transparent 55%);
+}
+.c-bmi__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: hsl(225,100%,20%);
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+}
+.c-bmi__range::-moz-range-thumb {
+  appearance: none;
+  background-color: hsl(225,100%,20%);
+  border-radius: 50%;
+  height: 2rem;
+  width: 2rem;
+}
+.c-bmi__range:focus::-webkit-slider-thumb {
+  background-color: hsl(225,30%,60%);
+  box-shadow: inset 0 0 0 0.25rem hsl(225,100%,20%);
+}
+.c-bmi__range:focus::-moz-range-thumb {
+  background-color: hsl(225,30%,60%);
+  box-shadow: inset 0 0 0 0.25rem hsl(225,100%,20%);
+}
+.c-bmi__result {
+  display: block;
+  font-size: 200%;
+  margin-bottom: 1.5rem;
+  text-align: right;
+}
+.c-bmi [type="radio"] { display: none; }
+
+/* RWD */
+@media (min-width: 600px) {
+  .c-bmi__groups { display: flex; }
+  .c-bmi__groups input:checked + label::before {
+    background-color: inherit;
+    clip-path: polygon(0% 0%,100% 0%,50% 100%);
+    left: 50%;
+    top: -1rem;
+    transform: translateX(-50%);
+    width: 1.5rem;
+  }
+  .c-bmi__groups label { flex: 1; }
+  [for="bmi-g0"] { border-radius: .25rem 0 0 .25rem; }
+  [for="bmi-g5"] { border-radius: 0 .25rem .25rem 0; }
+}
+
+/* For this demo */
+body { max-width: 40rem; margin: 1rem auto; }
